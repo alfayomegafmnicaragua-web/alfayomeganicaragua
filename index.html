@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Alfa y Omega Nicaragua 100.5 FM</title>
+<meta name="description" content="Escucha Radio Alfa y Omega Nicaragua 100.5 FM en vivo. Una radio de fe, esperanza y bendición para Nicaragua y el mundo.">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#071426;color:white}
+header{padding:24px 16px;text-align:center;background:#0d2340;border-bottom:2px solid #d6b45b}
+.logo{font-size:24px;font-weight:bold;color:#f2d17b}
+header p{color:#d7dfeb;margin-bottom:0}
+nav{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;padding:16px}
+nav a{color:white;text-decoration:none}
+.hero{text-align:center;padding:65px 20px 45px;background:linear-gradient(145deg,#102d50,#071426)}
+h1{font-size:clamp(30px,5vw,48px);margin:10px auto;color:#f2d17b}
+.hero p{font-size:18px;line-height:1.7;color:#e0e7f0}
+.btn{display:inline-block;padding:15px 24px;margin:10px 5px;border-radius:30px;text-decoration:none;font-weight:bold;background:#e4c16a;color:#10213a;border:none;cursor:pointer}
+.btn.secondary{background:#183b60;color:white;border:1px solid #7190ad}
+section{max-width:900px;margin:auto;padding:35px 20px;text-align:center}
+h2{color:#f2d17b}
+.player{background:#102744;border:1px solid #294866;border-radius:16px;padding:25px;margin-top:20px}
+audio{width:100%;margin:15px 0}
+.cards{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cards a{color:white;background:#142d4b;border:1px solid #294866;border-radius:12px;padding:16px;text-decoration:none}
+footer{padding:25px;text-align:center;background:#0d2340;color:#d7dfeb}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">RADIO ALFA Y OMEGA</div>
+<p>NICARAGUA · 100.5 FM</p>
+</header>
+<nav>
+<a href="#inicio">Inicio</a>
+<a href="#escuchar">Escuchar en vivo</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</nav>
+<main>
+<div class="hero" id="inicio">
+<p>UNA VOZ DE FE Y ESPERANZA</p>
+<h1>Radio Alfa y Omega Nicaragua</h1>
+<p>100.5 FM · Transmitiendo bendición a Nicaragua y al mundo</p>
+<a class="btn" href="#escuchar">▶ ESCUCHAR EN VIVO</a>
+<a class="btn secondary" href="https://alfayomega1005.radiofm.ar" target="_blank" rel="noopener">Nuestra radio online</a>
+</div>
+<section id="escuchar">
+<h2>Escúchanos en vivo</h2>
+<p>Conéctate con nuestra programación desde cualquier lugar.</p>
+<div class="player">
+<strong>RADIO ALFA Y OMEGA · 100.5 FM</strong>
+<audio controls preload="none">
+<source src="radio_alfa_y_omega_nicaragua
+" type="audio/mpeg">
+Tu navegador no puede reproducir este audio.
+</audio>
+<p>Presiona reproducir para comenzar a escuchar.</p>
+</div>
+</section>
+<section id="nosotros">
+<h2>Una radio con propósito</h2>
+<p>Bienvenidos a Radio Alfa y Omega Nicaragua 100.5 FM, un espacio para compartir fe, esperanza y mensajes que fortalecen el corazón. Acompáñanos con nuestra programación desde Nicaragua para el mundo.</p>
+</section>
+<section id="contacto">
+<h2>Conéctate con nosotros</h2>
+<p>Estamos aquí para recibir tus mensajes y compartir contigo.</p>
+<div class="cards">
+<a href="https://wa.me/50585221755" target="_blank" rel="noopener">WhatsApp</a>
+<a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+<a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+<a href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+<a href="https://alfayomega1005.radiofm.ar" target="_blank" rel="noopener">Sitio de la radio</a>
+<a href="#" id="compartir">Compartir página</a>
+</div>
+</section>
+</main>
+<footer>© <span id="year"></span> Radio Alfa y Omega Nicaragua 100.5 FM · Todos los derechos reservados.</footer>
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("compartir").addEventListener("click",async function(e){
+e.preventDefault();
+if(navigator.share){try{await navigator.share({title:document.title,url:location.href})}catch(err){}}
+else if(navigator.clipboard){try{await navigator.clipboard.writeText(location.href);alert("Enlace copiado")}catch(err){alert("Copia el enlace desde la barra del navegador")}}
+else{alert("Copia el enlace desde la barra del navegador")}
+});
+</script>
+</body>
+</html>
